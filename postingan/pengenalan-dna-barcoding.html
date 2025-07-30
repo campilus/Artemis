@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal DNA Barcoding</title>
+    
+    <!-- Memuat Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Menghubungkan ke file CSS (Pastikan path ini benar) -->
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- Memuat Tailwind CSS (diperlukan untuk kelas-kelas utility) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat ikon (Feather Icons) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header dengan efek glassmorphism -->
+    <header class="glass-effect sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-gray-900">Artemis</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Konten Artikel -->
+    <main class="container mx-auto px-6 py-12">
+        <article class="glass-effect max-w-3xl mx-auto p-8 md:p-12">
+            
+            <!-- Judul dan Meta Info -->
+            <header class="mb-8 text-center">
+                <span class="text-sm text-green-600 font-semibold">Membahas Artikel Ilmiah</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 my-4">DNA Barcoding: Mengungkap Identitas Makhluk Hidup Seperti Memindai Belanjaan</h1>
+                <div class="flex items-center justify-center text-sm text-gray-600">
+                    <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+                    <span>30 Juli 2025</span>
+                    <span class="mx-2">&bull;</span>
+                    <i data-feather="user" class="w-4 h-4 mr-2"></i>
+                    <span>Muhamad Nawawi</span>
+                </div>
+            </header>
+            
+            <!-- Gambar Artikel -->
+            <img src="../images/sampul-dna-barcoding.png" alt="Ilustrasi DNA Barcoding" class="w-full h-auto rounded-lg mb-8 shadow-lg">
+
+            <!-- Isi Artikel -->
+            <div class="prose lg:prose-xl max-w-none leading-relaxed">
+                <p>Pernahkah Anda berpikir, bagaimana para ilmuwan bisa tahu pasti jenis ikan yang ada di piring sushi Anda, atau membedakan dua spesies kupu-kupu yang terlihat sama persis? Jawabannya ada pada sebuah teknologi canggih yang terinspirasi dari hal yang sangat kita kenal: barcode.</p>
+                
+                <p>Selamat datang di dunia DNA Barcoding, sebuah metode revolusioner yang memungkinkan kita mengidentifikasi spesies makhluk hidup hanya dengan sepotong kecil DNA mereka. Sama seperti kasir memindai kode batang untuk mengetahui nama dan harga produk, ilmuwan menggunakan DNA barcoding untuk membaca "kode genetik" unik setiap organisme.</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">Bagaimana Cara Kerjanya?</h2>
+                <p>Untuk membuat ide ini praktis, Clear menyajikannya dalam empat hukum sederhana untuk membangun kebiasaan baik (dan kebalikannya untuk menghilangkan kebiasaan buruk):</p>
+                <ol>
+                    <li><strong>Pengambilan Sampel:</strong> Langkah pertama adalah mengumpulkan sedikit bagian dari organisme yang ingin diidentifikasi. Bisa sepotong daun dari tumbuhan, serpihan sirip ikan, atau sedikit jaringan otot dari hewan.</li>
+                    <li><strong>Ekstraksi DNA:</strong> Dari sampel tersebut, DNA diisolasi atau "dikeluarkan". Proses ini menggunakan metode kimia khusus untuk memisahkan DNA dari bagian sel lainnya, menghasilkan DNA murni yang siap dianalisis.</li>
+                    <li><strong>Amplifikasi DNA (PCR):</strong> DNA yang berhasil diekstrak jumlahnya sangat sedikit. Untuk bisa dibaca, bagian DNA spesifik yang menjadi "barcode"—seperti gen <strong>COI</strong> untuk hewan atau <strong>matK/rbcL</strong> untuk tumbuhan—diperbanyak hingga jutaan kali lipat menggunakan teknik yang disebut Polymerase Chain Reaction (PCR).</li>
+                    <li><strong>Sekuensing DNA:</strong> Setelah diperbanyak, urutan basa (huruf-huruf genetik A, T, C, G) dari DNA tersebut dibaca oleh mesin sekuensing. Hasilnya adalah serangkaian huruf yang merupakan kode unik spesies tersebut.</li>
+                    <li><strong>Analisis dan Pencocokan:</strong> "Barcode" yang sudah didapat kemudian dicocokkan dengan database genetik global, seperti GenBank. Jika ada kecocokan, voila! Identitas spesies pun terungkap dalam hitungan jam.</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">Mengapa DNA Barcoding Penting?</h2>
+                <ol>
+                    <li><strong>Identifikasi Cepat dan Akurat:</strong> DNA barcoding bisa membedakan spesies yang secara fisik (morfologi) sangat mirip, bahkan menemukan spesies yang sama sekali baru bagi dunia sains (Afifah et al., 2021; Bangol et al., 2014).</li>
+                    <li><strong>Membantu Upaya Konservasi:</strong> Dengan mengidentifikasi spesies langka dan terancam punah secara akurat, para pegiat konservasi dapat merancang strategi perlindungan yang lebih efektif dan memetakan lokasi populasi mereka.</li>
+                    <li><strong>Menjaga Keamanan Pangan:</strong> Pernah ragu dengan keaslian produk makanan? DNA barcoding bisa memverifikasi apakah ikan yang dijual benar-benar tuna sirip biru atau hanya spesies pengganti yang lebih murah. Ini juga membantu melacak produk ilegal dari hewan yang dilindungi.</li>
+                    <li><strong>Mengawasi Spesies Invasif:</strong> Teknologi ini membantu mendeteksi keberadaan spesies asing yang dapat merusak ekosistem lokal, sehingga tindakan pencegahan dapat segera dilakukan.</li>
+                    <li><strong>Memahami Evolusi:</strong> Dengan membandingkan "barcode" dari berbagai spesies, ilmuwan dapat menyusun pohon kekerabatan evolusioner dan memahami lebih dalam tentang keanekaragaman genetik di alam (Damanis et al., 2015).</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">Kesimpulan</h2>
+                <p>DNA barcoding adalah bukti nyata bagaimana sebuah ide sederhana—kode batang—dapat diadaptasi menjadi alat ilmiah yang luar biasa. Metode ini telah mengubah cara kita memandang, mengidentifikasi, dan melindungi keanekaragaman hayati di planet ini. Cepat, akurat, dan serbaguna, DNA barcoding adalah kunci untuk membuka jutaan rahasia yang tersimpan dalam setiap makhluk hidup.</p>
+                
+                <h2 class="text-2xl font-bold mt-8 mb-4">Referensi</h2>
+                <p>Afifah, I., Solihin, D., & Sunkar, A. (2021). Karakteristik Molekuler Kelelawar (Microchiroptera), berdasarkan DNA Mitokondria (Gen COI) di Gua Sukabumi dan Sentul Jawa Barat. , 14, 20-28. https://doi.org/10.15408/KAUNIYAH.V14I1.14147.</p>
+                <p>Bangol, I., Momuat, L., & Kumaunang, M. (2014). Barcode DNA Tumbuhan Pangi (Pangium edule R.) Berdasarkan Gen matK. Jurnal MIPA, 3, 113-119. https://doi.org/10.35799/JM.3.2.2014.5862.</p>
+                <p>Damanis, J., Momuat, L., Sangi, M., & Kumaunang, M. (2015). Isolasi dan Karakterisasi Barcode DNA Tanaman Nusa indah putih (Mussaenda frondosa) Berdasarkan Gen matK. Jurnal MIPA, 4, 111-114. https://doi.org/10.35799/JM.4.2.2015.8527.</p>
+            </div>
+
+            <!-- Tombol Kembali -->
+            <div class="text-center mt-12">
+                <a href="../index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition duration-300">
+                    <i data-feather="arrow-left" class="w-4 h-4 mr-2"></i>
+                    Kembali ke Semua Postingan
+                </a>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container mx-auto px-6 py-12">
+            <div class="text-center">
+                <p class="text-sm">&copy; 2025 Blog Pribadi Saya. Dibuat dengan ❤️.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script untuk menjalankan Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+</html>
