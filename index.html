@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Pribadi Saya</title>
+    
+    <!-- Memuat Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Menghubungkan ke file CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Memuat Tailwind CSS (diperlukan untuk kelas-kelas utility) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat ikon (Feather Icons) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <!-- Header dengan efek glassmorphism -->
+    <header class="glass-effect sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900">Artemis</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#about" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300">Tentang Saya</a>
+                <a href="#contact" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300">Kontak</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect">
+            <a href="index.html" class="block py-2 px-6 text-gray-700 hover:bg-white/20">Home</a>
+            <a href="#about" class="block py-2 px-6 text-gray-700 hover:bg-white/20">Tentang Saya</a>
+            <a href="#contact" class="block py-2 px-6 text-gray-700 hover:bg-white/20">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Konten Utama -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Judul Utama -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Selamat Datang di Ruang Tulis Saya</h1>
+            <p class="text-lg text-gray-800 max-w-2xl mx-auto">Tempat saya berbagi pemikiran, ulasan, dan cerita tentang berbagai topik yang menarik minat saya.</p>
+        </section>
+
+        <!-- Daftar Postingan Blog -->
+        <section id="posts">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Tulisan Terbaru</h2>
+            
+            <!-- Tombol Filter Kategori -->
+            <div id="filter-buttons" class="flex flex-wrap justify-center gap-2 mb-8">
+                <button class="filter-btn active-filter" data-filter="semua">Semua</button>
+                <button class="filter-btn" data-filter="review-buku">Review Buku</button>
+                <button class="filter-btn" data-filter="sains-populer">Sains Populer</button>
+                <button class="filter-btn" data-filter="membahas-artikel-ilmiah">Membahas Artikel Ilmiah</button>
+                <button class="filter-btn" data-filter="hobi">Hobi & Produktivitas</button>
+            </div>
+
+            <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Postingan 1 -->
+                <a href="postingan/post-atomic-habits.html" class="post-card glass-effect block overflow-hidden transition-all duration-300" data-category="sains-populer">
+                    <img src="images/dna-representation-concept.jpg" alt="Ilustrasi konsep DNA" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-blue-600 font-semibold">Sains Populer</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 text-gray-900">Membedah Konsep DNA dengan Sederhana</h3>
+                        <p class="text-gray-800 mb-4">Mari kita pahami dasar-dasar dari DNA, molekul yang menyimpan semua informasi genetik kita, dengan cara yang mudah.</p>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+                            <span>29 Juli 2025</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Postingan 1 -->
+                <a href="postingan/post-atomic-habits.html" class="post-card glass-effect block overflow-hidden transition-all duration-300" data-category="sains-populer">
+                    <img src="images/dna-representation-concept.jpg" alt="Ilustrasi konsep DNA" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-blue-600 font-semibold">Sains Populer</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 text-gray-900">Membedah Konsep DNA dengan Sederhana</h3>
+                        <p class="text-gray-800 mb-4">Mari kita pahami dasar-dasar dari DNA, molekul yang menyimpan semua informasi genetik kita, dengan cara yang mudah.</p>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+                            <span>29 Juli 2025</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Postingan 2 -->
+                <a href="postingan/post-atomic-habits.html" class="post-card glass-effect block overflow-hidden transition-all duration-300" data-category="review-buku">
+                    <img src="https://placehold.co/600x400/5b21b6/ffffff?text=Atomic+Habits" alt="Sampul buku Atomic Habits" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-purple-600 font-semibold">Review Buku</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 text-gray-900">Mengapa 'Atomic Habits' Begitu Populer?</h3>
+                        <p class="text-gray-800 mb-4">Buku karya James Clear ini menawarkan pendekatan praktis untuk membangun kebiasaan baik.</p>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+                            <span>30 Juli 2025</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bagian Tentang Saya -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-effect p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3 text-center">
+                    <img src="images/profile_4x3.png" alt="Foto profil penulis" class="rounded-full w-48 h-48 mx-auto shadow-lg object-cover">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Tentang Saya</h2>
+                    <p class="text-gray-800 mb-4">
+                        Halo! Saya Muhamad Nawawi, seorang penulis dan pembaca yang bersemangat. Blog ini adalah wadah bagi saya untuk menuangkan ide, hasil perenungan, dan berbagi pengetahuan. Saya percaya bahwa tulisan memiliki kekuatan untuk menginspirasi dan membuka wawasan baru.
+                    </p>
+                    <p class="text-gray-800">
+                        Di sini, Anda akan menemukan berbagai topik, mulai dari ulasan buku favorit saya, pembahasan konsep ilmiah yang menarik, hingga tips produktivitas yang saya terapkan sehari-hari. Selamat membaca!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container mx-auto px-6 py-12">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-4 text-gray-900">Hubungi Saya</h2>
+                <p class="mb-6 text-gray-800">Jangan ragu untuk terhubung melalui media sosial atau kirim email.</p>
+                <div class="flex justify-center space-x-6 mb-8 text-gray-900">
+                    <a href="#" class="hover:text-blue-600 transition duration-300" aria-label="Twitter"><i data-feather="twitter"></i></a>
+                    <a href="#" class="hover:text-blue-600 transition duration-300" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+                    <a href="mailto:emailanda@example.com" class="hover:text-blue-600 transition duration-300" aria-label="Email"><i data-feather="mail"></i></a>
+                </div>
+                <p class="text-sm text-gray-800">&copy; 2025 Blog Pribadi Saya. Dibuat dengan ❤️.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script untuk menjalankan Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+    <!-- Menghubungkan ke file JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

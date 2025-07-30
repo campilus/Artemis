@@ -1,0 +1,83 @@
+/* Menggunakan font Inter sebagai font utama */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Latar belakang gradien diperlukan agar efek glassmorphism terlihat */
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    background-attachment: fixed; /* Membuat gradien tetap saat di-scroll */
+    color: #1f2937; /* Warna teks default yang lebih gelap untuk kontras */
+}
+
+/* Kelas utama untuk efek Glassmorphism */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.3); /* Latar belakang putih semi-transparan */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Untuk kompatibilitas Safari */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Menyesuaikan header */
+header.glass-effect {
+    border-radius: 0; /* Header tidak perlu sudut membulat */
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: rgba(255, 255, 255, 0.5); /* Header sedikit lebih solid */
+}
+
+/* Menghapus efek hover default dan menggantinya dengan yang lebih halus */
+.post-card:hover {
+    transform: translateY(-5px); /* Tetap ada sedikit efek angkat */
+    box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Gaya untuk tombol filter dengan efek glass */
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #1f2937; /* Teks gelap agar terbaca */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Gaya untuk tombol filter yang aktif */
+.filter-btn.active-filter {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #111827;
+    border-color: rgba(255, 255, 255, 0.8);
+    font-weight: 700;
+}
+
+/* Penyesuaian warna teks pada artikel untuk keterbacaan */
+.prose h1, .prose h2, .prose h3 {
+    color: #111827;
+}
+.prose p, .prose li, .prose strong {
+    color: #374151;
+}
+
+/* Membuat footer transparan */
+footer {
+    background: transparent !important;
+    color: #374151 !important; /* Warna teks gelap */
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+footer a {
+    color: #374151 !important;
+}
+
+footer a:hover {
+    color: #111827 !important;
+}
